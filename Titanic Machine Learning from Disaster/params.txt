@@ -1,0 +1,118 @@
+# grid_params=[
+#     [{
+#         # AdaboostClassifier() https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html
+#         # The beast parameter for AdaBoostClassifier is {'learning_rate': 0.25, 'n_estimators': 100, 'random_state': 0} with runtime of 34.45 secounds
+#         'n_estimators': [100],
+#         'learning_rate': [0.25],
+#         # algorithm ： {'SAMME'，'SAMME.R'}，可选（默认='SAMME.R'） 选择使用什么算法
+# #         'algorithm':{'SAMME'，'SAMME.R'}
+#         'random_state':grid_seed
+#     }],
+    
+#     [{
+#         # BaggingClassifier() https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html
+#         # The beast parameter for BaggingClassifier is {'max_samples': 0.1, 'n_estimators': 300, 'random_state': 0} with runtime of 30.54 secounds
+#         'n_estimators':[300],
+#         # max_samples ： int或float，optional（default = 1.0）从X中抽取的样本数量，用于训练每个基本估算器。float百分比和int样本个数
+#         'max_samples':[0.1],
+#         # 从X中绘制以训练每个基本估算器的特征数。
+# #         'max_features':grid_ratio,
+#         'random_state':grid_seed
+#     }],
+    
+#     [{
+#         # ExtraTreesClassifier() https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesClassifier.html
+# #       The beast parameter for ExtraTreesClassifier is {'criterion': 'entropy', 'max_depth': 6, 'n_estimators': 10, 'random_state': 0} with runtime of 67.68 secounds
+#         'n_estimators': [10],
+#         # Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain. 基尼系数和信息熵
+#         'criterion': ['entropy'],
+#         'max_depth': [6],
+#         'random_state': grid_seed
+#     }],
+    
+#     [{
+#         # GradientBoostingClassifier () https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
+#         # The beast parameter for GradientBoostingClassifier is 
+#         # {'learning_rate': 0.1, 'max_depth': 2, 'n_estimators': 300, 'random_state': 0} with runtime of 336.92 secounds
+#         'n_estimators': [300],
+#         'learning_rate': [0.1],
+# #         'criterion':['friedman_mse','mse','mae'] , # default friedman_mse
+# #         'max_depth': grid_max_depth,      
+#         'max_depth': [2],
+#         'random_state': grid_seed
+#     }],    
+    
+#         [{
+#         # RandomForestClassifier () https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+# #         The beast parameter for RandomForestClassifier is {'criterion': 'gini', 'max_depth': 6, 'n_estimators': 300, 'random_state': 0} with runtime of 82.48 secounds
+#         'n_estimators': grid_n_estimators,
+# #         'criterion': grid_criterion,     # default=”gini”
+#         'max_depth': [6],
+#         'random_state': grid_seed
+#     }],    
+    
+#     [{
+#         # GaussianProcessClassifier () https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier.html
+        
+#         # max_iter_predict 牛顿方法中用于近似预测期间后验的最大迭代次数。较小的值将以更差的结果为代价减少计算时间。
+#         'max_iter_predict': grid_n_estimators,
+#         'random_state': grid_seed
+#     }],    
+    
+#     [{
+#         # LogisticRegressionCV - http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html
+        
+#         # fit_intercept 指定是否应将常量（也称为偏差或截距）添加到决策函数中。
+#         'fit_intercept': grid_bool, #default: True
+#         #'penalty': ['l1','l2'],
+#         # solver 用于优化问题的算法。
+#         'solver': ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'], #default: lbfgs
+#         'random_state': grid_seed
+#      }],
+
+
+#         [{
+#         # BernoulliNB - http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html
+            
+#         # alpha （拉普拉斯/ Lidstone）平滑参数（0表示无平滑）。
+#         'alpha': grid_ratio, #default: 1.0
+#      }],
+
+
+#         # GaussianNB - 
+#         [{}],
+
+#         [{
+#         #KNeighborsClassifier - http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+            
+#         'n_neighbors': [1,2,3,4,5,6,7], # default: 5 默认情况下kneighbors查询使用的邻居数。
+#         'weights': ['uniform', 'distance'], # default = ‘uniform’用于预测的权重函数
+#         'algorithm': ['auto', 'ball_tree', 'kd_tree', 'brute'] # 用于计算最近邻居的算法：
+#     }],
+
+
+#         [{
+#         #SVC - http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+#         #http://blog.hackerearth.com/simple-tutorial-svm-parameter-tuning-python-r
+#         # The beast parameter for SVC is {'C': 1, 'decision_function_shape': 'ovo', 'gamma': 0.1, 'probability': True, 'random_state': 0} with runtime of 35.65 secounds
+#         #'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
+# #         'C': [1,2,3,4,5], #default=1.0 惩罚参数
+#         'C': [1], #default=1.0 惩罚参数
+#         'gamma': grid_ratio, # default: auto 
+# #         'decision_function_shape': ['ovo', 'ovr'], #default:ovr
+#         'decision_function_shape': ['ovo'], #default:ovr
+#         'probability': [True], # 是否启用概率估计 default：False
+#         'random_state': grid_seed
+#      }],
+
+
+#     [{
+#         #XGBClassifier - http://xgboost.readthedocs.io/en/latest/parameter.html
+#         # The beast parameter for XGBClassifier is {'learning_rate': 0.05, 'max_depth': 2, 'n_estimators': 300, 'seed': 0} with runtime of 120.49 secounds   
+#         'learning_rate': [0.05], #default: .3
+#         'max_depth': [1,2,4,6,8,10], #default 2
+#         'n_estimators': [300], 
+#         'seed': grid_seed  
+#      }]   
+    
+# ]
