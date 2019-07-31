@@ -15,4 +15,4 @@
 #### 进行onehot编码之后进行分析，没想到竟然比没有使用onehot编码的预测分数来的低....... 可能是因为决策树的原因，我们不需要进行onehot编码
 
 
-__目前最高分数：__ (Titanic Machine Learning from Disaster2 - 方法1) kaggle分数为 0.82296 top4%
+__目前最高分数：__ (Titanic Machine Learning from Disaster2 - 方法1) kaggle分数为 0.82296 __top4%__
