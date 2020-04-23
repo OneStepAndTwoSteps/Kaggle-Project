@@ -1,6 +1,8 @@
-# 数据说明
+# Bike Sharing Demand
 
-## Data Fields
+__RMSLE Score：`0.36714` , Rank：TOP `1%`__
+
+## 数据说明 Data Fields
 
 datetime 
 *   hourly date + timestamp  
