@@ -46,3 +46,15 @@ registered
 
 count 
 *    number of total rentals
+
+## clean data is important
+
+__不同的清洗方式对模型的优劣有着很大的影响__
+
+*   `Bike Sharing Demand.ipynb` 使用离散化数据来对模型进行训练（`score：0.49`）
+
+*   `Bike Sharing Demand make new_feature.ipynb` 创建 `新的特征` 对模型进行训练（模型融合后：`score：0.36714`）
+
+结论：我们一定要对数据做好足够的清洗，否则就会造成 `garbage in garbage out` 。
+
+
