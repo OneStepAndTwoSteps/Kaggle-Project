@@ -2,6 +2,8 @@
 
 __RMSLE Score：`0.36714` , Rank：TOP `1%`__
 
+Kaggle `Bike Sharing Demand` notebook address：https://www.kaggle.com/kk0105/bike-sharing-demand-top1
+
 ## 数据说明 Data Fields
 
 datetime 
