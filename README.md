@@ -1,6 +1,7 @@
 ## Kaggle
 
-This repository contains the codes that has been written for Kaggle competitions 
+
+该仓库记录一些参加过的 Kaggle competitions 和 notebook 
 
 
 ## My kaggle road
